@@ -1,8 +1,3 @@
-// ceo => 2200
-// manager => 1800
-// cto => 1800
-// developer => 1500
-// default => 1000
 function calculateSalary(role) {
     if (role === 'ceo') {
         return 2200;
