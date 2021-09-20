@@ -19,13 +19,15 @@ class BankAccount {
   }
 
   class BankAccountVip extends BankAccount {
+      min = 1000;
+      interest = 1.03;
       
       constructor (initialAmount) {
           super (initialAmount);
       }
        deposit(amount) {
-           if (amount >= 1000) {
-              super.deposit(amount * 1.03);
+           if (amount >= this.min) {
+              super.deposit(amount * this.interest);
            }
            else {
                super.deposit(amount);
