@@ -36,4 +36,3 @@ const persons = [
   fetchPersonById(1)
   .then((prova) => JSON.parse(prova))
   .then((prova) => console.log(prova));
-// .then((result) => console.log(result));
