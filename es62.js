@@ -32,12 +32,6 @@ const persons = [
       }, 1000);
     });
   }
-  
-//   fetchPersonById(2)
-//     .then((personJson) => JSON.parse(personJson))
-//     .then((person) => console.log(person))
-//     .catch((err) => console.error(err));
-
 async function f() {
     let generic = await fetchPersonById(1);
     let person = await JSON.parse(generic);
