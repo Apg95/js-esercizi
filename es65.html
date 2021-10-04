@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <div id="container">
+      <button type="button" id="fetch-post">
+        Fetch Post from LocalStorage
+      </button>
+
+      <h2>Post: <span id="post-title"></span></h2>
+    </div>
+  </body>
+</html>
+
+<script>
+    async function buba(){
+        const ricchione = await localStorage.getItem("post");
+        const comevuoi = await JSON.parse(ricchione);
+        console.log(comevuoi);
+        const title = document.querySelector("#post-title");
+        title.innerHTML = comevuoi;
+    }
+    buba()
+</script>
