@@ -1,0 +1,23 @@
+<html>
+  <body>
+    <div id="container" style="display: flex; align-items: center;"></div>
+  </body>
+</html>
+
+<script>
+    async function buba() {
+        const fetchOne = await fetch("https://jsonplaceholder.typicode.com/todos/4");
+        const todo = await fetchOne.json();
+        const title = document.createElement("h2");
+        title.textContent = todo.title; 
+        console.log(todo);
+        const container = document.querySelector("#container");
+        container.append(title);
+        const inputOne = document.createElement("input");
+        inputOne.type = "checkbox";
+        inputOne.disabled = true;
+        inputOne.checked = todo.completed;
+        container.append(inputOne);
+    }
+    buba();
+</script>
