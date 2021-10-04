@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <div id="container">
+      <ul class="todo-list"></ul>
+    </div>
+  </body>
+</html>
+
+<script>
+    async function fetchOne() {
+        const todos = await fetch("https://jsonplaceholder.typicode.com/todos");
+        const selector = document.querySelector(".todo-list");
+        const jsonOne = await todos.json();
+        const forC = jsonOne.forEach((item) => {
+            const listS = document.createElement("li");
+            listS.innerHTML = item.title;
+            listS.append(selector);
+            console.log(listS);
+        })
+    }
+    fetchOne()
+</script>
