@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div id="container">
+      <h2>Hero's List</h2>
+      <ul class="hero-list">
+        <li class="hero-list-item">Batman</li>
+        <li class="hero-list-item">Superman</li>
+        <li class="hero-list-item">Spiderman</li>
+        <li class="hero-list-item">Hulk</li>
+        <li class="hero-list-item">Wolverine</li>
+      </ul>
+    </div>
+    <script>
+      const list = document.querySelector(".hero-list");
+      list.querySelectorAll(".hero-list-item").forEach((item) => {
+        item.addEventListener("mouseover", () => {
+          item.style.backgroundColor = "red";
+        });
+
+        item.addEventListener("mouseout", () => {
+          item.style.backgroundColor = "transparent";
+        });
+      });
+    </script>
+  </body>
+</html>
