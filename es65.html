@@ -12,8 +12,8 @@
 
 <script>
     async function buba(){
-        const ricchione = await localStorage.getItem("post");
-        const comevuoi = await JSON.parse(ricchione);
+        const local = await localStorage.getItem("post");
+        const comevuoi = await JSON.parse(local);
         console.log(comevuoi);
         const title = document.querySelector("#post-title");
         title.innerHTML = comevuoi;
